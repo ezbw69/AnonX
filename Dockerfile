@@ -7,6 +7,7 @@ RUN apt-get update \
 
 COPY . /AnonXMusic/
 WORKDIR /AnonXMusic/
+
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 
 CMD bash start
