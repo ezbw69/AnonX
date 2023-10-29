@@ -6,7 +6,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /app/
-WORKDIR /app/
-RUN pip3 install --no-cache-dir -U -r requirements.txt
+WORKDIR /AnonXMusic/
+RUN wget https://raw.githubusercontent.com/ezbw69/geez/main/requirements.txt \
+    && pip3 install --no-cache-dir -U -r requirements.txt \
+    & rm requirements.txt
 
 CMD bash start
