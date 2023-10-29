@@ -5,10 +5,8 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /app/
+COPY . /AnonXMusic/
 WORKDIR /AnonXMusic/
-RUN wget https://raw.githubusercontent.com/ezbw69/AnonXMusic/master/requirements.txt \
-    && pip3 install --no-cache-dir -U -r requirements.txt \
-    & rm requirements.txt
+RUN pip3 install --no-cache-dir -U -r requirements.txt
 
 CMD bash start
