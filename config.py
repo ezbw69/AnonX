@@ -16,13 +16,13 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 180))
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
-# Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 1356469075))
+# Get this value from @MissNibbi_Bot on Telegram by /id
+OWNER_ID = int(getenv("OWNER_ID", 5890922139))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -34,7 +34,7 @@ UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/ezbw69/AnonXMusic",
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "patch-1")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
@@ -43,7 +43,7 @@ SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/hero4in")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/worstpartyinc")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
-AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
+AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", True))
 
 
 # Get this credentials from https://developer.spotify.com/dashboard
@@ -78,6 +78,23 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
+
+    "START_IMG_URL", "https://te.legra.ph/file/c32dbc3bb69c8a928d6a5.mp4"
+)
+PING_IMG_URL = getenv(
+    "PING_IMG_URL", "https://te.legra.ph/file/189af1b511270d743065f.mp4"
+)
+PLAYLIST_IMG_URL = "https://te.legra.ph/file/5df64233270143eee44ff.jpg"
+STATS_IMG_URL = "https://te.legra.ph/file/e702e1d040d68edcc5c2b.mp4"
+TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+STREAM_IMG_URL = "https://te.legra.ph/file/bd995b032b6bd263e2cc9.jpg"
+SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
+YOUTUBE_IMG_URL = "https://te.legra.ph/file/cbdf4f7ada397531e273c.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
+=======
     "START_IMG_URL", "https://telegra.ph/file/52fd7ea4dc0fe42eac4ee.png"
 )
 PING_IMG_URL = getenv(
@@ -92,7 +109,7 @@ SOUNCLOUD_IMG_URL = "https://telegra.ph/file/5f4765b2273c31dc59b3d.png"
 YOUTUBE_IMG_URL = "https://telegra.ph//file/7c9c1831099058beca9e9.png"
 SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/52fd7ea4dc0fe42eac4ee.png"
 SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/52fd7ea4dc0fe42eac4ee.png"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/52fd7ea4dc0fe42eac4ee.png"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/52fd7ea4dc0fe42eac4ee.png
 
 
 def time_to_seconds(time):
